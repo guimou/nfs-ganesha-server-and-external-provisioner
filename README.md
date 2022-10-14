@@ -4,7 +4,7 @@
 
 It works just like in-tree dynamic provisioners: a `StorageClass` object can specify an instance of `nfs-ganesha-server-and-external-provisioner` to be its `provisioner` like it specifies in-tree provisioners such as GCE or AWS. Then, the instance of nfs-ganesha-server-and-external-provisioner will watch for `PersistentVolumeClaims` that ask for the `StorageClass` and automatically create NFS-backed `PersistentVolumes` for them. For more information on how dynamic provisioning works, see [the docs](http://kubernetes.io/docs/user-guide/persistent-volumes/) or [this blog post](http://blog.kubernetes.io/2016/10/dynamic-provisioning-and-storage-in-kubernetes.html).
 
-Note: This repository was migrated from https://github.com/kubernetes-incubator/external-storage/tree/HEAD/nfs. Some of the following instructions will be updated once the build and release automtion is setup. To test container image built from this repository, you will have to build and push the nfs-provisioner image using the following instructions.
+Note: This repository was migrated from https://github.com/kubernetes-incubator/external-storage/tree/HEAD/nfs. Some of the following instructions will be updated once the build and release automation is setup. To test container image built from this repository, you will have to build and push the nfs-provisioner image using the following instructions.
 
 ```sh
 make build
